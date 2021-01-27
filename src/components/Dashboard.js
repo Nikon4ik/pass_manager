@@ -7,7 +7,7 @@ function Dashboard() {
     
     for(let key of keys) {
         if (key.match(/authorize_user/) !== null && key.match(/authorize_user/).index !== 0) {
-            window.location.assign('/login')
+            window.location.assign('#login')
             return
         }
     }
@@ -17,7 +17,7 @@ function Dashboard() {
                 localStorage.removeItem(key)
             }
         }
-        window.location.assign('/login')
+        window.location.assign('#login')
     }
     return (
         <div style={{width: '600px', margin: 'auto'}}>

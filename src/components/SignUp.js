@@ -19,7 +19,7 @@ export default function SignUp() {
 
     for(let key of keys) {
         if (key.match(/authorize_user/) !== null && key.match(/authorize_user/).index === 0) {
-            window.location.assign('/dashboard')
+            window.location.assign('#dashboard')
             return
         }
     }
@@ -33,7 +33,7 @@ export default function SignUp() {
             event.preventDefault()
             setCount(count + 1)
             localStorage.setItem("user"+count, JSON.stringify([login, password]));
-            window.location.assign('/login')
+            window.location.assign('#login')
         }
         else {
             event.preventDefault()
@@ -44,7 +44,7 @@ export default function SignUp() {
         setError('')
     }
     function LogIn() {
-        window.location.assign('/login')
+        window.location.assign('#login')
     }
     
     return (
