@@ -68,7 +68,7 @@ function DashboardList(props) {
                 localStorage.setItem(ev[0], JSON.stringify(newItem))
             }
         })
-        window.location.assign('#dashboard')
+        window.location.assign('/dashboard')
     }
     function ShowItem(event) {
         let type = event.target.parentNode.firstChild.nextSibling.nextSibling.type
@@ -92,7 +92,7 @@ function DashboardList(props) {
                     }
                 }) 
             }
-            window.location.assign('#dashboard')
+            window.location.assign('/dashboard')
         }
         return (
             <div style={styles.div} key={index}>

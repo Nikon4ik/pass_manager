@@ -34,7 +34,7 @@ function DashboardForm() {
             for(let key of keys) {
                 if ( key.match(/authorize_user/) !== null && key.match(/authorize_user/).index === 0 ) {
                     localStorage.setItem(key.replace('authorize_user', '')+"point"+count, JSON.stringify([naming, login, password]));
-                    window.location.assign('#dashboard')
+                    window.location.assign('/dashboard')
                 }
             }
         }

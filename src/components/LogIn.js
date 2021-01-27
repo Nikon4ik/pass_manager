@@ -18,7 +18,7 @@ function LogIn(index) {
 
     for(let key of keys) {
         if (key.match(/authorize_user/) !== null && key.match(/authorize_user/).index === 0) {
-            window.location.assign('#dashboard')
+            window.location.assign('/dashboard')
             return
         }
     }
@@ -31,7 +31,7 @@ function LogIn(index) {
                         if (login === user[0] && password === user[1]) {
                             setError('')
                             localStorage.setItem('authorize_'+key, 'true')
-                            window.location.assign('#dashboard')
+                            window.location.assign('/dashboard')
                             return
                         }
                         else {
@@ -54,7 +54,7 @@ function LogIn(index) {
         setError('')
     }
     function SignUp() {
-        window.location.assign('#signup')
+        window.location.assign('/signup')
     }
     return (
         <form style={styles.form} onSubmit={submitForm} className="login">
